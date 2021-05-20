@@ -12,9 +12,16 @@ const navbar = document.getElementById("navbar");
 const content = document.getElementById("content");
 
 const router = async () => {
-  // 👉 Replace this with callback handler 👈
+  //check the query string of the current URL for an authorization code
+  //if so, tell the auth0 client to handle redirect callback obv.
+  if (new URLSearchParams(window.location.search).has("code")) {
+   await window.auth0Client.handleRedirectCallback();
+   window.history.replaceState({}, document.title, "/");
+  }
 
-  // 👉 Replace this with user profile handler 👈
+  //if the user has been authenticated, fetch user profile and attach to windows instances with getUser()
+  if (await window.auth0Client.isAuthenticated())
+    window.user = await window.auth0Client.getUser();
 
   const request = location.hash.slice(1).toLowerCase() || "/";
   const page = routes[request] || Error404;
