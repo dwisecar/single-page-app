@@ -32,6 +32,40 @@ const expensesApi = {
       console.log("Error getting reports", err);
     }
   },
+  getDollars: async () => {
+    try {
+      const token = await window.auth0Client.getTokenSilently();
+      const options = {
+          method: "GET",
+          headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+          },
+      };
+      const res = await fetch(`${window.env.API_URL}/dollars`, options);
+      const json = await res.json();
+      return json;
+    } catch (err) {
+      console.log("Error getting reports", err);
+    }
+  },
+  getCents: async () => {
+    try {
+      const token = await window.auth0Client.getTokenSilently();
+      const options = {
+          method: "GET",
+          headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+          },
+      };
+      const res = await fetch(`${window.env.API_URL}/cents`, options);
+      const json = await res.json();
+      return json;
+    } catch (err) {
+      console.log("Error getting reports", err);
+    }
+  },
 };
 
 export default expensesApi;
