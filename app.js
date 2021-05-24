@@ -10,7 +10,7 @@ import router from "./router";
    client_id,
    redirect_uri,
    audience: "https://expenses-api", // 👈 Added
-   scope: "read:reports", // 👈 Added
+   scope: "read:reports, read:dollars, read:cents", // 👈 Added
   });
 
   // handle user navigation
