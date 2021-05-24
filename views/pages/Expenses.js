@@ -12,10 +12,10 @@ const Expenses = {
     <p id="user-greet">Hello, ${window.user.name}</p>
     <p>These are your expenses:</p>
     ${await Table.render(expenses)}
-    `;
+    
     <p>These are your dollars:</p>
     ${await Table.render(dollars)}
-    `;
+    
     <p>These are your cents:</p>
     ${await Table.render(cents)}
     `;
