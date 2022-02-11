@@ -22,6 +22,9 @@ const Navbar = {
     <li>
       <a id="expenses-link" href="#expenses">Expenses</a>
     </li>
+    <li>
+    <a id="expenses-link" href="#tokens">Tokens</a>
+    </li>
     <li class="spacer" />
     <li id="log-out" style="display: ${isAuthenticated ? "block" : "none"}">
       <a href="#"> Logout</a>
