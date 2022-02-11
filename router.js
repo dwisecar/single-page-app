@@ -2,11 +2,14 @@ import Error404 from "./views/pages/Error404";
 import Home from "./views/pages/Home";
 import Expenses from "./views/pages/Expenses";
 import Navbar from "./views/components/Navbar";
+import Tokens from "./views/pages/Tokens";
 
 const routes = {
   "/": Home,
   expenses: Expenses,
+  tokens: Tokens
 };
+
 
 const navbar = document.getElementById("navbar");
 const content = document.getElementById("content");

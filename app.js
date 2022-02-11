@@ -9,8 +9,8 @@ import router from "./router";
    domain,
    client_id,
    redirect_uri,
-   audience: "https://expenses-api", // 👈 Added
-   scope: "read:reports read:dollars read:cents", // 👈 Added
+   audience: "https://expenses-api", 
+   scope: "openid email profile read:reports", 
   });
 
   // handle user navigation
