@@ -49,6 +49,7 @@ const Navbar = {
       e.preventDefault();
       window.auth0Client.logout({
        returnTo: window.env.APP_URL,
+       federated: true
       });
     });
   },
