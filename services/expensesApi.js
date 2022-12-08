@@ -5,6 +5,7 @@ const expensesApi = {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*"
         },
       };
 
